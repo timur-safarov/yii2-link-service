@@ -90,18 +90,10 @@ class Link extends \yii\db\ActiveRecord
      * Метод создания ссылки
      * 
      * @param Link $mLink - текущий объект Link для сохранения
-     * 
+     *        & нужен для возврата именно того объекта который был передан
      */
     public function create(Link &$mLink)
     {
-
-        // $mLink = $this;
-
-        //$valid = Model::validateMultiple($mImages) && $valid;
-
-        // $mLink->load(Yii::$app->request->post());
-        // $mLink->validate();
-        // print_r($mLink->getErrors());
 
         $transaction = Yii::$app->db->beginTransaction();
 
@@ -117,12 +109,10 @@ class Link extends \yii\db\ActiveRecord
         );
 
         // Если такая ссылку уже есть в базе то просто вытаскиваем её
-        $isIssetRecord = self::find()->where(['hash_link' => $mLink->hash_link])->one();
+        $isIssetRecord = self::findOne(['hash_link' => $mLink->hash_link]);
 
         if ($isIssetRecord) {
-
             $mLink = $isIssetRecord;
-
             return $mLink;
         }
 

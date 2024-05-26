@@ -65,7 +65,6 @@ class LinkClick extends \yii\db\ActiveRecord
         return $this->hasOne(Link::class, ['id' => 'id_link']);
     }
 
-
     
     public function beforeValidate()
     {
@@ -91,19 +90,9 @@ class LinkClick extends \yii\db\ActiveRecord
      */
     public function create(Link $mLink)
     {
-
-        // $mLink = $this;
-
-        //$valid = Model::validateMultiple($mImages) && $valid;
-
-        // $mLink->load(Yii::$app->request->post());
-        // $mLink->validate();
-        // print_r($mLink->getErrors());
-
         try {
 
             $transaction = Yii::$app->db->beginTransaction();
-
             $mLinkClick = new $this;
 
             $insertData = [
@@ -140,7 +129,6 @@ class LinkClick extends \yii\db\ActiveRecord
                 }
 
             } else {
-
                 throw new \Exception('Модель Link не валидна.');
             }
 
