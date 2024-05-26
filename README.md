@@ -92,6 +92,6 @@ return [
 ```php yii migrate```
 
 
-
-
+## 7). Установить права для записи логов и кэша
+chmod -R 777 runtime/ web/assets/
 
