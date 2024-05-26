@@ -25,13 +25,13 @@
 Требования
 ------------
 
-Linux
-Apache
-Минимальная версия PHP 7.4. Тестировал на версии 8.3
-Php модули - Mode rewrite, Curl
-Mysql
-Composer
-Git
+* Linux
+* Apache
+* Минимальная версия PHP 7.4. Тестировал на версии 8.3
+* Php модули - Mode rewrite, Curl
+* Mysql
+* Composer
+* Git
 
 # Запуск приложения
 
