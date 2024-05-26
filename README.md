@@ -62,7 +62,7 @@ Git
   ```cd /var/www/public_html```
 
 - Склонируйте репозиторий в текущую папку
-  ```git clone git@github.com:whatever .```
+  ```git clone git@github.com:timur-safarov/yii2-link-service.git .```
 
 ## 4). Обновите или установите зависимости
   ```composer install```
