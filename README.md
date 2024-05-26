@@ -93,5 +93,5 @@ return [
 
 
 ## 7). Установить права для записи логов и кэша
-chmod -R 777 runtime/ web/assets/
+  ```chmod -R 777 runtime/ web/assets/```
 
