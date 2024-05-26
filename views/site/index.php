@@ -52,13 +52,11 @@ $this->title = Yii::$app->name;
 
                             <div class="alert alert-success">
                                 <?php
-
                                     echo Html::img($qrcode, [
                                         'width' => '150',
                                         'height' => '150',
                                         'class' => 'qrcode',
                                     ]);
-
                                 ?>
                             </div>
                             
@@ -95,7 +93,8 @@ $this->title = Yii::$app->name;
                                     'template' => '{label}{input}{hint}{error}'
                                 ])->textInput([
                                     // 'value' => 'https://ya.ru',
-                                    'placeholder' => 'https://example.com/users/', 'class' => 'form-control'
+                                    'placeholder' => 'https://example.com/users/',
+                                    'class' => 'form-control'
                                 ])->label('Ваш URL-адрес'); ?>
 
                                 <div class="form-group">
